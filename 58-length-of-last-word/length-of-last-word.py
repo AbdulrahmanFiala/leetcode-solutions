@@ -1,11 +1,8 @@
 class Solution:
     def lengthOfLastWord(self, s: str) -> int:
 
-        # remove leading and trailing spaces
-        s = s.strip()
+        # Split string into a list of substrings based on white-space
+        arr = s.split()
 
-        # Find the index of the last space
-        last_space_index = s.rfind(" ")
-
-        # Return the length of the last word
-        return (len(s) - 1) - last_space_index
+        # Return the length of the last item in the arr
+        return (len(arr[-1])) 
