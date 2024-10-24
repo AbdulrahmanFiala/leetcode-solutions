@@ -12,3 +12,5 @@ class Solution:
                 left+=1
             right+=1
         return left
+
+# Explantation Video (https://www.youtube.com/watch?v=ycAq8iqh0TI)
