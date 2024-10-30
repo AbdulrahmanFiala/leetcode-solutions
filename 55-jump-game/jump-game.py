@@ -6,4 +6,5 @@ class Solution:
             if(nums[i] + i >= goal):
                 goal = i
         return goal == 0
+        
 # Explanation Video (https://www.youtube.com/watch?v=Yan0cv2cLy8)        
