@@ -1,8 +1,11 @@
 class Solution:
     def lengthOfLastWord(self, s: str) -> int:
-
-        # Split string into a list of substrings based on white-space
-        arr = s.split()
-
-        # Return the length of the last item in the arr
-        return (len(arr[-1])) 
+        i, length = len(s) - 1, 0
+        while s[i] == " ":
+            i-=1
+        while s[i] != " " and i >= 0:
+            length +=1
+            i-=1
+        return length
+        
+# Explanation Video (https://www.youtube.com/watch?v=KT9rltZTybQ)
