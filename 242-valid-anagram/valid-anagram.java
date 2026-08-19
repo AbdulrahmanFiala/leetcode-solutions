@@ -3,16 +3,12 @@ class Solution {
         if(s.length() != t.length()){
             return false;
         }
-        Map<Character, Integer> countS = new HashMap<>();
-        Map<Character, Integer> countT = new HashMap<>();
-
+        HashMap<Character, Integer> sMap = new HashMap<>();
+        HashMap<Character, Integer> tMap = new HashMap<>();
         for (int i = 0; i < s.length(); i++){
-            countS.put(s.charAt(i), countS.getOrDefault(s.charAt(i), 0) + 1);
-            countT.put(t.charAt(i), countT.getOrDefault(t.charAt(i), 0) + 1);
+            sMap.put(s.charAt(i), sMap.getOrDefault(s.charAt(i), 0) + 1);
+            tMap.put(t.charAt(i), tMap.getOrDefault(t.charAt(i), 0) + 1);
         }
-        if (countS.equals(countT)){
-            return true;
-        }
-        return false;
+        return sMap.equals(tMap);
     }
 }
